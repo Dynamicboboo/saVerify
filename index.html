@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>姓名和身份证号验证</h1>
+        <form id="idcardForm">
+            <label for="inputData">输入数据 (格式: 姓名 身份证号, 每行一条):</label>
+            <textarea id="inputData" name="inputData" rows="10" placeholder="姓名 身份证号" required></textarea>
+
+            <button type="submit">验证</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
