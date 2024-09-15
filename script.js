@@ -4,7 +4,7 @@ document.getElementById('idcardForm').addEventListener('submit', function(e) {
     let inputData = document.getElementById('inputData').value.trim();
     let lines = inputData.split('\n');
     let results = [];
-    let idcardPattern = /\d{17}[\dX]/;  // 身份证号的正则表达式：18位数字，最后一位可以是X
+    let idcardPattern = /\d{17}[\dX]/;  // 
 
     // 清空结果区域
     document.getElementById('result').innerHTML = '';
@@ -12,12 +12,12 @@ document.getElementById('idcardForm').addEventListener('submit', function(e) {
     lines.forEach((line, index) => {
         line = line.trim();
 
-        // 寻找身份证号（18位数字串）
+        
         let idcardMatch = line.match(idcardPattern);
 
         if (idcardMatch) {
-            let idcard = idcardMatch[0];  // 提取匹配的身份证号
-            let name = line.replace(idcard, '').trim();  // 剩下的部分视为姓名
+            let idcard = idcardMatch[0];  // 提取匹配的号
+            let name = line.replace(idcard, '').trim();  // 姓名
 
             if (!name || idcard.length !== 18) {
                 results.push(`第 ${index + 1} 行数据格式有误。`);
